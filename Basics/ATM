@@ -1,0 +1,59 @@
+#include <iostream>
+#include<iomanip>
+using namespace std;
+
+int main()
+{
+    int x;
+    float y;
+    cin >> x >> y;
+
+
+    //Sucessful Transaction
+    if (x < y && x%5==0) {
+        float suc_ans = y - x;
+        suc_ans -= 0.5;
+        cout << fixed << setprecision(2) << suc_ans;
+        //fixed tag is used to add the zeroes 
+    }
+
+    //Incorrect withdrawl
+    else if (x % 5 != 0 && x < y) {
+        cout <<fixed << setprecision(2) << y;
+    }
+
+    //Insufficient funds
+    else {
+        cout << fixed << setprecision(2) << y;
+    }
+
+    return 0;
+}
+
+
+// Another method
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    cout.precision(2);
+
+    int a;
+    float b;
+    cin >> a >> b;
+
+    if ((a % 5 == 0) && (b - a - 0.5 >= 0))
+    {
+        cout << fixed << b - a - 0.5 << endl;
+    }
+    else
+    {
+        cout << fixed << b << endl;
+    }
+
+    return 0;
+}
