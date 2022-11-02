@@ -1,0 +1,63 @@
+/*
+Problem
+If Give an integer N . Write a program to obtain the sum of the first and last digits of this number.
+
+Input
+The first line contains an integer T, the total number of test cases. Then follow T lines, each line contains an integer N.
+
+Output
+For each test case, display the sum of first and last digits of N in a new line.
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int T,N,a;
+    cin >> T;
+    while (T--) {
+        cin >> N;
+
+        a = N % 10;
+        while (N > 9) {
+            N /= 10;
+        }
+      
+       
+        cout << N + a << endl;
+    }
+    
+    return 0;
+}
+
+
+
+// Another method
+
+#include<bits/stdc++.h>
+
+using namespace std;
+#define el endl;
+
+int main()
+{
+
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n;
+        cin >> n;
+        int rem = n % 10;
+        while (n > 9)
+        {
+            n = n / 10;
+        }
+        cout << n + rem << el;
+    }
+
+    return 0;
+
+}
